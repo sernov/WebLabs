@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.1(4)</title>
+        <script>
+            var name = prompt("Введите ваше имя:");
+            var birthYear = prompt("Введите год вашего рождения:");
+
+            var currentYear = new Date().getFullYear();
+            var age = currentYear - parseInt(birthYear);
+
+            document.write(name + ": " + age);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

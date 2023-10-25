@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.7(4)</title>
+    </head>
+    <body>
+        <h1>Калькулятор среднего значения</h1>
+        <p>Введите числа, разделенные запятыми:</p>
+        <input type="text" id="inputNumbers" placeholder="Введите числа">
+        <button onclick="calculateAverage()">Вычислить среднее</button>
+        <p id="result">Среднее значение: </p>
+
+        <script>
+            const calculateAverage = () => {
+                const inputNumbers = document.getElementById("inputNumbers").value;
+                const numbersArray = inputNumbers.split(',').map(Number);
+                const resultElement = document.getElementById("result");
+
+                if (numbersArray.some(isNaN)) {
+                    resultElement.textContent = "Пожалуйста, введите числа, разделенные запятыми.";
+                } else {
+                    const sum = numbersArray.reduce((acc, current) => acc + current, 0);
+                    const average = sum / numbersArray.length;
+                    resultElement.textContent = "Среднее значение: " + average;
+                }
+            };
+        </script>
+    </body>
+</html>

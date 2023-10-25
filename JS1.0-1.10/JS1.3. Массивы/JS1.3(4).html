@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.3(4)</title>
+        <script>
+            var colors = ["красный", "черный", "белый"];
+            var redCount = 0;
+
+            for (var i = 0; i < 1000000; i++) {
+                var randomColor = getRandomColor();
+                if (randomColor === "красный") {
+                redCount++;
+                }
+            }
+
+            function getRandomColor() {
+                var randomIndex = Math.floor(Math.random() * colors.length);
+                return colors[randomIndex];
+            }
+
+            alert("Максимальное количество красных значений: " + redCount);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

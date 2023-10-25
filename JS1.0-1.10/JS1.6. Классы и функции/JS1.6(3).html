@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS1.6(3)</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h2>Исходный массив:</h2>
+        <p id="before"></p>
+
+        <h2>Массив после преобразования:</h2>
+        <p id="after"></p>
+
+        <script>
+            let arr = [-1, 2, -3, 4, -5, 6, -7, 8, -9, 10, 11, -12, 13, -14, 15];
+            let newArr = arr.map(num => num < 0 ? num*num : num);
+
+            document.getElementById("before").innerHTML = arr;
+            document.getElementById("after").innerHTML = newArr;
+        </script>
+    </body>
+</html>

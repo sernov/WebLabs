@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.8(4)</title>
+    </head>
+    <body>
+        <h1>Средний балл студентов</h1>
+        <p id="originalGrades"></p>
+        <p id="result"></p>
+
+        <script>
+            const grades = [85, 90, 78, 92, 88];
+            const sum = grades.reduce(function(accumulator, currentValue) {
+                return accumulator + currentValue;
+            });
+            const average = sum / grades.length;
+
+            const originalGradesElement = document.getElementById("originalGrades");
+            originalGradesElement.textContent = `Исходный массив: ${grades}`;
+
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `Средний балл: ${average}`;
+        </script>
+    </body>
+</html>

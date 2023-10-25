@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.8(2)</title>
+    </head>
+    <body>
+        <h1>Вычисление возраста</h1>
+        <p id="ageList"></p>
+
+        <script>
+            const birthYears = [1990, 1985, 1992, 2000, 1998];
+
+            const ageList = document.getElementById("ageList");
+
+            const currentYear = new Date().getFullYear();
+            const ages = birthYears.map(year => currentYear - year);
+
+            ages.forEach((age, index) => {
+                ageList.innerHTML += `<p>Год рождения: ${birthYears[index]}, Возраст: ${age} лет</p>`;
+            });
+        </script>
+    </body>
+</html>

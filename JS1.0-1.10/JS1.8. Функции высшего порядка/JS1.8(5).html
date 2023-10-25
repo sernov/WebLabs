@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.8(5)</title>
+    </head>
+    <body>
+        <h1>Преобразование массива</h1>
+        <p id="originalArray"></p>
+        <p id="result"></p>
+
+        <script>
+            const strArray = ['JavaScript', 'Python', 'PHP', 'Java', 'C'];
+
+            function mapForEach(arr, fn) {
+                const newArray = [];
+                for (let i = 0; i < arr.length; i++) {
+                    newArray.push(fn(arr[i]));
+                }
+                return newArray;
+            }
+
+            const checkLength = (item) => item.length <= 3 ? 0 : 1;
+            const lenArray = mapForEach(strArray, checkLength);
+
+            const originalArrayElement = document.getElementById("originalArray");
+            const resultElement = document.getElementById("result");
+
+            originalArrayElement.textContent = `Исходный массив: [${strArray.join(', ')}]`;
+
+            resultElement.textContent = `Результат: [${lenArray.join(', ')}]`;
+        </script>
+    </body>
+</html>

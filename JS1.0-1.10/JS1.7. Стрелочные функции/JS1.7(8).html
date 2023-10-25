@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.7(8)</title>
+    </head>
+    <body>
+        <h1>Email Фильтр</h1>
+        
+        <input type="text" id="filterInput" placeholder="Введите часть email">
+        
+        <div id="emailList">
+        </div>
+
+        <script>
+            const filterInput = document.getElementById("filterInput");
+            const emailList = document.getElementById("emailList");
+            const emails = ["ivan_ivanov@mail.ru", "svetlana.petrova@gmail.com", "sergei_kozlov@yandex.ru", "natasha_smirnova@rambler.ru", "mikhail_volkov@ya.ru"];
+
+            const updateEmailList = () => {
+                const filter = filterInput.value.toLowerCase();
+
+                emailList.innerHTML = '';
+
+                for (const email of emails) {
+                    if (email.toLowerCase().includes(filter)) {
+                        const div = document.createElement('div');
+                        div.textContent = email;
+                        emailList.appendChild(div);
+                    }
+                }
+            };
+
+            filterInput.addEventListener('input', updateEmailList);
+
+            updateEmailList();
+        </script>
+    </body>
+</html>

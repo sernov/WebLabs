@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.7(3)</title>
+    </head>
+    <body>
+        <h1>Проверка фамилии на палиндром</h1>
+        
+        <input type="text" id="surnameInput" placeholder="Введите вашу фамилию">
+        <button onclick="checkPalindrome()">Проверить</button>
+        <p id="result"></p>
+
+        <script>
+            const isPalindrome = (surname) => {
+                const cleanedSurname = surname.toLowerCase().replace(/\s/g, '');
+                const reversedSurname = cleanedSurname.split('').reverse().join('');
+                return cleanedSurname === reversedSurname;
+            };
+
+            const checkPalindrome = () => {
+                const surnameInput = document.getElementById("surnameInput");
+                const resultElement = document.getElementById("result");
+
+                const surname = surnameInput.value;
+
+                if (isPalindrome(surname)) {
+                    resultElement.textContent = "Ваша фамилия является палиндромом.";
+                } else {
+                    resultElement.textContent = "Ваша фамилия не является палиндромом.";
+                }
+            };
+        </script>
+    </body>
+</html>

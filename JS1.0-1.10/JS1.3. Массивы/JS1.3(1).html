@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.3(1)</title>
+        <script>
+            var numbers = [];
+            
+            for (var i = 0; i < 15; i++) {
+                var randomNum = Math.floor(Math.random() * (30 - (-10) + 1)) + (-10);
+                numbers.push(randomNum);
+            }
+
+            var positiveNumbers = [];
+            var sum = 0;
+
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] > 0) {
+                    sum += numbers[i];
+                    positiveNumbers.push(numbers[i]);
+                }
+            }
+
+            var average = sum / positiveNumbers.length;
+
+            alert("Массив: " + numbers);
+            alert("Положительные числа: " + positiveNumbers);
+            alert("Среднее арифметическое положительных элементов: " + average);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

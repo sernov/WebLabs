@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.3(3)</title>
+        <script>
+        var numbers = [1, 2, 3, -4, 0, -6, 14, -12, 5, 7, -8, 9, 0];
+
+        var positiveSum = 0;
+        var positiveCount = 0;
+        var negativeSum = 0;
+        var negativeCount = 0;
+        var zeroCount = 0;
+
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 0) {
+            positiveSum += numbers[i];
+            positiveCount++;
+            } else if (numbers[i] < 0) {
+            negativeSum += numbers[i];
+            negativeCount++;
+            } else {
+            zeroCount++;
+            }
+        }
+
+        var positiveAverage = positiveSum / positiveCount;
+        var negativeAverage = negativeSum / negativeCount;
+
+        alert("Массив: " + numbers);
+        alert("Среднее арифметическое положительных чисел: " + positiveAverage);
+        alert("Среднее арифметическое отрицательных чисел: " + negativeAverage);
+        alert("Количество нулей: " + zeroCount);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

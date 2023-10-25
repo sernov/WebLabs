@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.8(3)</title>
+    </head>
+    <body>
+        <h1>Проверка прав редактирования сайта</h1>
+        <p id="adminInfo"></p>
+
+        <script>
+            const users = [
+                { name: 'Peter', isAdmin: false },
+                { name: 'Mark', isAdmin: true },
+                { name: 'John', isAdmin: false },
+                { name: 'Jane', isAdmin: true },
+                { name: 'Tony', isAdmin: true },
+            ];
+
+            const admins = users.filter(user => user.isAdmin);
+
+            const adminInfo = document.getElementById("adminInfo");
+
+            if (admins.length > 0) {
+                const adminNames = admins.map(admin => admin.name);
+                adminInfo.textContent += `Сайт редактируют: ${adminNames.join(', ')}`;
+            } else {
+                adminInfo.textContent += 'На сайте нет администраторов.';
+            }
+        </script>
+    </body>
+</html>

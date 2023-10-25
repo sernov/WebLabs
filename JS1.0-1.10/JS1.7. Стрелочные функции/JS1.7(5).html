@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1.7(5)</title>
+    </head>
+    <body>
+        <h1>Количество дней до Нового Года</h1>
+        <p id="result">Здесь будет результат</p>
+        
+        <script>
+            const daysUntilNewYear = () => {
+                const today = new Date();
+                const newYear = new Date(today.getFullYear() + 1, 0, 1);
+                const daysRemaining = Math.floor((newYear - today) / (1000 * 60 * 60 * 24));
+                return daysRemaining;
+            };
+
+            const resultElement = document.getElementById("result");
+            const daysLeft = daysUntilNewYear();
+            resultElement.textContent = `До Нового Года осталось ${daysLeft} дней.`;
+        </script>
+    </body>
+</html>
