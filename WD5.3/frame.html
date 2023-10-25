@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+
+      <title>WD5.3</title>
+
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">О нас</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+  </head>
+  <body>
+
+      <div class="container mt-3">
+        <!-- Carousel -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://barnaulhotel.ru/wp-content/uploads/2019/08/lyuks-1-min.jpg" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://na-dache.pro/din/uploads/posts/2023-03/1678169649_na-dache-pro-p-gostinitsa-rossiya-intereri-foto-64.jpg" class="d-block w-100" alt="Image 2">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        <div class="row g-2 mt-3">
+          <!-- Buttons -->
+          <button class="btn btn-primary">Забронировать номер</button>
+          <button class="btn btn-secondary">Узнать больше</button>
+        </div>
+        <!-- Card -->
+        <div class="row mt-3">
+          <div class="col-sm">
+            <div class="card">
+              <img src="https://s01.cdn-pegast.net/get/e1/6a/cc/2ed68f75a1057e94bfee596b99e6bdc1bd3424e42c611232972933ca5f/5c57481f24689.jpg" class="card-img-top" alt="Card Image">
+              <div class="card-body">
+                  <h5 class="card-title">Бассейн</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <img src="https://www.multitour.ru/files/imgs/hotel_8207_bdb5cae636939c44d5fa2526327c2013.jpg" class="card-img-top" alt="Card Image">
+              <div class="card-body">
+                  <h5 class="card-title">Море</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <img src="https://bron-hotel.ru/public/sites/tabs_photo/362/27191b.jpg" class="card-img-top" alt="Card Image">
+              <div class="card-body">
+                  <h5 class="card-title">Сауна</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="container border bg-dark text-white mt-3">
+          <p class="text-center text-sm-left lh-base font-normal text-none text-decoration-none text-reset">
+            <br>Оставьте Ваши данные, и мы с Вами свяжемся:       
+          </p>
+          <form>
+              <div class="mb-3">
+                  <label for="FormControlInput" class="form-label">Номер телефона</label>
+                  <input type="number" class="form-control" id="FormControlInput" placeholder="+7 (___) ___-__-__ ">
+              </div>
+              <div class="mb-3">
+                <label for="FormControlInput1" class="form-label">Электронная почта</label>
+                <input type="email" class="form-control" id="FormControlInput1" placeholder="name@example.com">
+              </div>
+              <button type="submit" class="btn btn-primary">Отправить</button>
+              <p class="text-none">
+                <br>
+              </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="main.js"></script>
+  </body>
+</html>
